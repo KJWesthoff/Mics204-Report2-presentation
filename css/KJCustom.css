@@ -1,0 +1,289 @@
+@import 'KJblack.scss';
+
+
+
+/* .reveal.slides {
+    position: relative;
+} */
+
+.timeline-container {
+    position: fixed;
+    bottom: -400px;
+    width: 200%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    z-index: 1;
+    /* Ensure the timeline is above other content */
+}
+
+.timeline {
+    position: absolute;
+    width: 200%;
+    height: 5px;
+    background-color: var(--gold);
+}
+
+.timeline-event {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: var(--medalist);
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline-time {
+    position: relative;
+    transform: translateY(120%) rotate(45deg);
+    text-wrap: nowrap;
+    font-size: large;
+}
+
+.timeline-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 12rem;
+    position: relative;
+    padding: 1px;
+    border-radius: 5px;
+    border: solid 3px;
+    transform: translateY(-110%) translateX(-50%);
+
+}
+
+.timeline-card.attack {
+    border: none;
+}
+
+.timeline-card.attack .syringe {
+    position: relative;
+    left: -8rem;
+    top: 8rem;
+  
+}
+.timeline-card.attack .bricks {
+    stroke: var(--goldengate);
+    margin: 0;
+}
+
+.timeline-card.attack .float-text {
+    font-family:'Courier New', Courier, monospace;
+    color: var(--gold);
+    position: relative;
+    top: 14rem;
+}
+
+.timeline-card.attack .float-buildstack
+{
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    color: black;
+    position: relative;
+    top: 1rem;
+}
+
+
+
+
+
+.timeline-card.disco {
+    background-color: white;
+}
+
+
+
+.timeline-card img {
+    width: 100%
+}
+
+.timeline-investigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20rem;
+    position: relative;
+    padding: 1px;
+    transform: translateY(-150%) translateX(-50%);
+}
+
+
+.timeline-investigation p {
+    font-size: larger;
+}
+
+
+.timeline-investigation ul {
+    font-size: large;
+}
+
+.timeline-investigation img {
+    width: 50%;
+}
+
+.timeline-sw {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20rem;
+    position: relative;
+    padding: 0px;
+    transform: translateY(-130%) translateX(-55%) rotate(50deg);
+    font-size: large;
+}
+
+.timeline-sw img {
+    padding: 7px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.div_float {
+    display: flex;
+    position: inherit;
+    width: 5em;
+    left: 50px;
+    top: -250px;
+}
+
+.div_float.attack {
+    display: flex;
+    position: inherit;
+    width: 5em;
+    left: -10rem;
+    top: -320px;
+}
+
+.speech-bubble {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    color: black;
+    padding: 10px;
+    font-size: medium;
+    border: solid 8px black;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    margin: 0px;
+    padding: 0px;
+}
+
+a.reference {
+    position: absolute;
+    left: 0;
+    font-size: medium;
+    color: white;
+}
+
+.splash-box {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    /* width: 20rem; */
+}
+
+.splash-box.np {
+    transform: rotate(-20deg) translateX(-10rem) translateY(-10rem);
+    background-color: #f5f5f5;
+    width: 300px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    color: #555;
+    box-shadow: 10px 5px 5px #555;
+}
+
+
+.splash-box.np p {
+    font-size: larger;
+    color: #555;
+    margin-left: 2rem;
+}
+
+.splash-box.np.list {
+    color: #555;
+    padding: 0 !important;
+    width: 100%;
+    font-family: courier, monospace;
+    border: 1px solid #dedede;
+}
+
+.splash-box.np li {
+    list-style: none;
+    border-bottom: 1px dotted #ccc;
+    text-indent: 25px;
+    height: auto;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+.splash-box.eng {
+    left: 2rem;
+    transform: rotate(10deg);
+    background-color: var(--goldengate);
+    width: 320px;
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.splash-box.eng h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.splash-box.eng p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: dashed 2px;
+}
+
+.splash-box.comms {
+    left: 25rem;
+    top: 8rem;
+    transform: rotate(-10deg);
+    background-color: var(--blue);
+    border-radius: 1rem;
+    width: 320px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.splash-box.comms li {
+    border-bottom: dotted white 2px;
+}
+
+.splash-box.postit {
+    width: 260px;
+    margin: 25px;
+    left: 45rem;
+    transform: rotate(5deg);
+    box-shadow: 10px 5px 5px #555;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    border: 1px solid #E8E8E8;
+    font-family: 'Reenie Beanie';
+    font-size: 2rem;
+    color: black;
+    border-bottom-right-radius: 60px 5px;
+    background: -webkit-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%);
+
+}
+
+.splash-box.postit h4 {
+    color: black;
+    padding-left: 1rem;
+}

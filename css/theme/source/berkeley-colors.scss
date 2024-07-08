@@ -1,0 +1,51 @@
+// colors.scss
+
+// Berkeley Primary Colors
+$gold: #FDB515;
+$blue: #003262;
+$founders: #3B7EA1;
+$medalist: #C4820E;
+
+// Berkeley Secondary Neutrals
+$wellmantile: #D9661F;
+$bayfog: #DDD5C7;
+$sathergate: #B9D3B6;
+
+// Berkeley Secondary Vibrants
+$rosegarden: #EE1F60;
+$lawrence: #00B0DA;
+$ion: #CFDD45;
+
+// Berkeley Secondary Brights
+$goldengate: #ED4E33;
+$laplane: #00A598;
+$soybean: #859438;
+
+// Berkeley Secondary Darks
+$southhall: #6C3302;
+$pacific: #46535E;
+$stonepine: #584F29;
+
+// Define CSS custom properties
+:root {
+  --gold: #{$gold};
+  --blue: #{$blue};
+  --founders: #{$founders};
+  --medalist: #{$medalist};
+
+  --wellmantile: #{$wellmantile};
+  --bayfog: #{$bayfog};
+  --sathergate: #{$sathergate};
+
+  --rosegarden: #{$rosegarden};
+  --lawrence: #{$lawrence};
+  --ion: #{$ion};
+
+  --goldengate: #{$goldengate};
+  --laplane: #{$laplane};
+  --soybean: #{$soybean};
+
+  --southhall: #{$southhall};
+  --pacific: #{$pacific};
+  --stonepine: #{$stonepine};
+}
