@@ -69,7 +69,8 @@
 
 							<div class="timeline-card attack fragment" data-fragment-index="3">
 								<div class="float-text fragment" data-fragment-index="4">SUNBURST</div>
-								<img class="syringe fragment" data-fragment-index="4" src="assets/injection-syringe-svgrepo-com.svg" alt="inject icon">
+								<img class="syringe fragment" data-fragment-index="4"
+									src="assets/injection-syringe-svgrepo-com.svg" alt="inject icon">
 								<img class="bricks" src="assets/build-wall-svgrepo-com.svg" alt="build stack icon">
 								<div class="float-buildstack">"Orion" Buildstack</div>
 							</div>
@@ -85,17 +86,19 @@
 							<div class="timeline-time fragment" data-fragment-index="5">
 								<h5>June 2020</h5>
 							</div>
-						
+
 							<div class="timeline-card attack fragment" data-fragment-index="6">
-								<img class="cleanup fragment fade-out" data-fragment-index="7" src="assets/clean-svgrepo-com.svg" alt="cleanup icon">
-								<img class="binary fragment fade-out" data-fragment-index="7" src="assets/binary-code-svgrepo-com.svg" alt="binary icon">
+								<img class="cleanup fragment fade-out" data-fragment-index="7"
+									src="assets/clean-svgrepo-com.svg" alt="cleanup icon">
+								<img class="binary fragment fade-out" data-fragment-index="7"
+									src="assets/binary-code-svgrepo-com.svg" alt="binary icon">
 							</div>
 
-						
+
 						</div>
-						
-						
-					
+
+
+
 					</div>
 				</div>
 			</section>
@@ -151,6 +154,13 @@
 					</div>
 				</div>
 
+
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+						Vigilant Analyst!!
+						FireEye did a thorough writeup as the attack was happening[8], and showed that SUNBURST has the ability to gather information on the target, download and write files, run tasks etc.
+					</textarea>
+				</aside>
 
 			</section>
 
@@ -272,7 +282,7 @@
 					<ul>
 						<li>Small Footprint</li>
 						<li>Obfuscated by de-compiling and re compiling</li>
-						<li>Made to look like source host</li>
+						<li>Made to look like build-type source code</li>
 						<li>Features to look for Malware monitoring/antivirus</li>
 						<li>Patient to evade logging</li>
 					</ul>
@@ -703,25 +713,99 @@ private static readonly ulong[] configTimeStamps = new ulong[]
 					</pre>
 					<aside class="notes" data-markdown>
 						<textarea data-template>
-							Hashed values, de hashed by various cyber security entities
+							The ’Update()’ function checks if a list of defensive processes are running (AntiVirus, firewalls etc.). It will then get the process id’s and try to disable these quietly, leaving the target vulnerable for further exploitation.
 						</textarea>
 					</aside>
 				</section>
 			</section>
 			<section>
 				<h2>C2/Phone Home</h2>
+				<div class="phone-home fragment">
+					<img class="et" src="assets/ET_logo_3.svg" alt="et hand">
+					<img class="et-hand" src="assets/ET-HAND.svg" alt="et hand">
+					<p>Domain generation algorithm <br> Hidden Base64 encoded URL’s</p>
+					<img src="assets/earth-15-svgrepo-com.svg" alt="earth">
+				</div>
+				<div class="C2 fragment">
+					<img class="et" src="assets/traffic-flow-svgrepo-com.svg" alt="et hand">
+					<img class="et-hand" src="assets/xml-svgrepo-com.svg" alt="et hand">
+					<p>C2 traffic hidden in ORION xml communication</p>
+					<img src="assets/hacker-svgrepo-com.svg" alt="earth">
+				</div>
+
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+						After all the if's have run and the coast is clear, SUNBURST starts to phone home
+						Domain generation based on geolocation
+						Malware often needs hardcoded URL's (potential weakness)
+
+						C2 comms hidden in ORION xml traffic, to evade firewalls and SIEM
+
+					</textarea>
+				</aside>
 
 			</section>
 			<section>
 				<h2>Who got hit?</h2>
+				<div class="fragment">
+					Anyone With Orion Version
+					<br> 2019.4 - 2020.2. 5300.12432.
+				</div>
 				<h2>Who got exploited?</h2>
+				<div class="fragment">
+					About 100
+					<br>Selected High Value Targets
+					<br>CobaltStrike Beacon
+
+				</div>
 			</section>
 			<section>
 				<h2>Attribution</h2>
+				<ul>
+					<li>It's not ransomware</li>
+					<li>Patience = expensive</li>
+					<li>Effort on cleaning</li>
+				</ul>
+				<div class="fragment">
+					<h2>Points to a "Nation State Actor"</h2>
+				</div>
+
+
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+						- The attackers were selective, relatively few targets
+						were exploited further and the exploited targets
+						were security, government institutions and defense
+						entities.
+						- The malware’s primary function is information
+						gathering and reporting
+						- Large effort was made to blend in, thorough ob-
+						fuscation by hashing values and names to avoid
+						detection by code analyses etc. (expensive)
+						- The code lays dormant on a system for at least 12
+						days and until conditions are right for it to execute
+						successfully (more expensive to pull off, time is
+						money)
+						-  Effort to hide C2 communication, indicating want-
+						ing to be persistent on the target
+						- The code is not destructive
+						- No economical scope (it is not ransomware)
+						- The attackers were thorough in cleaning log files
+						after doing lateral movement and executing ex-
+						ploits
+						- SUNBURST was removed from SolarWinds build
+						pipeline before it was detected (SolarWinds only
+						found it on their systems after investigating a
+						crashed server[3]).
+
+					</textarea>
+				</aside>
 			</section>
 			<section>
 				<h2>Aftermath</h2>
 				<h3>Still on-going..</h3>
+				<h3 class="fragment">SolarWinds settled a class action lawsuit October 2022, paying out $26 million to shareholders</h3>
+				<h3 class="fragment">In October 2023, the SEC sued SolarWinds and CISO Timothy Brown</h3>
 
 			</section>
 			<section>
@@ -729,7 +813,7 @@ private static readonly ulong[] configTimeStamps = new ulong[]
 				<h3>etc..</h3>
 
 			</section>
-			
+
 
 
 

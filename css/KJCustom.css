@@ -287,3 +287,23 @@ a.reference {
     color: black;
     padding-left: 1rem;
 }
+
+.phone-home {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 10rem;
+}
+
+.phone-home .et-hand {
+    transform: scaleX(-1) translateY(-2rem);
+    
+}
+
+.C2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 10rem;
+}
+
