@@ -91,9 +91,6 @@
 								<img class="cleanup" src="assets/clean-svgrepo-com.svg" alt="cleanup icon">
 								<img class="binary" src="assets/binary-code-svgrepo-com.svg" alt="binary icon">
 							</div>
-
-
-
 						</div>
 
 
@@ -167,8 +164,13 @@
 
 				<aside class="notes" data-markdown>
 					<textarea data-template>
-						Vigilant Analyst!!
-						FireEye did a thorough writeup as the attack was happening[8], and showed that SUNBURST has the ability to gather information on the target, download and write files, run tasks etc.
+						- Vigilant Analyst!!
+						- FireEye did a thorough analysis as the attack was happening[8] 
+						  - Showed that SUNBURST gather information
+						  - Download and write files
+						  - Run tasks etc.
+						- Notified SolarWinds Dec. 12
+						  - Dec 14 SolarWinds send out notice 
 					</textarea>
 				</aside>
 
@@ -249,28 +251,37 @@
 					</div>
 				</div>
 
+				<aside class="notes" data-markdown>
+					<textarea data-template>
+					- Breach seen from inside SolarWinds
+					  - Base on talk by CISO Tim Brown 
+					- Get help 
+					- Do Work (Engineering)
+					- Communicate (triage who to call first)
+					- External Stakeholders
+					  - Lesson: You Will Get Overwhelmed 	
+					</textarea>
+				</aside>
+
 			</section>
 
 			<section>
 				<h2>Description of the Attack</h2>
 				<div>
 					<ul>
-						<li class="fragment" data-fragment-index="16">Code only present in a range of versions of
-							deployed software
+						<li class="fragment" data-fragment-index="16">Supply Chain Attack
 							<ul>
-								<li>Malware transplanted into Orion build process</li>
-								<li>Code eventually found on a crashed server with a build VM</li>
+								<li>It utilizes trust in out-sourced resources</li>
+								<li>Mitigates security to sub-supplier</li>
 							</ul>
 						</li>
 
-						<li class="reconSlide fragment" data-fragment-index="17">Attacker did recon prior to attack
+						<li class="reconSlide fragment" data-fragment-index="17">Reach is larger
 							<ul>
-								<li>Probed vulnerabilities</li>
-								<li>Removed all traces</li>
+								<li>"wolf shepherds clothing" situation</li>
+								<li>Security vendors are an obvious target</li>
 							</ul>
 						</li>
-
-
 					</ul>
 
 
@@ -280,6 +291,9 @@
 						- SupplyChain Attack
 						  - It utilizes the trust companies have in out-sourced resources
 						  - Trying to make security someone elses problem
+						  - C-suite tries to get it off their books 
+						    - Often successfully - no matter how bad
+							- Can be mitigated by legislation
 						- The attack surface and reach is much larger for the same effort (a lot more can be hit with the same hack)  
 						- Hacking SolarWinds put the attacker in a "wolf shepherds clothing" situation. In hindsight security vendors are an obvious target
 					</textarea>
@@ -545,7 +559,9 @@ private static void Update()
 					</pre>
 					<aside class="notes" data-markdown>
 						<textarea data-template>
-
+							- Update tracks processes
+							- Tries to kill those quietly: 
+							  - (HKLM/SYSTEM/CurrentControlSet/services/"servicename here"/Start registry entries set to value 4 (discrete coding))
 
 						</textarea>
 					</aside>
@@ -724,6 +740,8 @@ private static readonly ulong[] configTimeStamps = new ulong[]
 					<aside class="notes" data-markdown>
 						<textarea data-template>
 							The ’Update()’ function checks if a list of defensive processes are running (AntiVirus, firewalls etc.). It will then get the process id’s and try to disable these quietly, leaving the target vulnerable for further exploitation.
+
+							All is obfuscated by hashing (i even has its own hasing function)
 						</textarea>
 					</aside>
 				</section>
@@ -831,7 +849,8 @@ private static readonly ulong[] configTimeStamps = new ulong[]
 					<textarea data-template>
 						- The author of npm packages colors.js and faker.js, Marak Squires, has intentionally committed corrupt versions of each to his public GitHub repositories that trigger infinite loops causing a denial of service. 
 						- Microsoft engineer found the backdoor after investigating a performance regression in Debian. (Again an awake engineer spotted it). The original ope source developer had been groomed by a group or idividual "Jia Tan" who was alowed to publish code, <br> The Backdoor code was hidden, compressed in a testing library.
-						- Attack on openSSH
+						- Attack on openSSH CVE-2024-6387
+						  - reintroduces a previously patched issue, tracked as CVE-2006-5051. 
 
 					</textarea>
 				</aside>
@@ -863,6 +882,13 @@ private static readonly ulong[] configTimeStamps = new ulong[]
 							href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-077a"
 							target="_blank">https://www.cisa.gov/news-events/cybersecurity-advisories/aa21-077a</a>
 					</li>
+					<li>
+						US Securities and Exchange Commission Press Release (SEC Charges SolarWinds and Chief Information Security Officer with Fraud, Internal  Control Failures) <a
+							href="https://www.sec.gov/news/press-release/2023-227"
+							target="_blank">https://www.sec.gov/news/press-release/2023-227</a>
+					</li>
+					
+
 				</ul>
 				<div>
 					<h4>This presentation:</h4>
